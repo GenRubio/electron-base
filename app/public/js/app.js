@@ -1,10 +1,10 @@
 let $ = (jQuery = require("jquery"));
 require('popper.js');
 require('bootstrap');
+require('@fortawesome/fontawesome-free/js/fontawesome.js');
 window.toastr = require('toastr');
-
+var ipc = require('electron').ipcRenderer;
 const datepicker = require("js-datepicker");
-
 const Render = {
   loadComponent(folder, view) {
     const component = $("[data-" + folder + "='" + view + "']");
